@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ProfileActivity"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/goToChatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:text="@string/goToChat" />
+
+    <TextView
+        android:id="@+id/yourProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yourName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_name" />
+
+    <EditText
+        android:id="@+id/nameEditBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nameHint"/>
+
+    <TextView
+        android:id="@+id/yourEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_email" />
+
+
+    <EditText
+        android:id="@+id/emailProfileEditBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/emailHint" />
+
+    <TextView
+        android:id="@+id/yourPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_picture" />
+
+
+    <ImageButton
+        android:id="@+id/profilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/picture_frame" />
+
+
+    <TextView
+        android:id="@+id/clickButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/click_button" />
+
+
+</LinearLayout>
