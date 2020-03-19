@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">AndroidLabsFinal</string>
+    <string name="hello_message">Hello World!</string>
+    <string name="typeHere">Type Here</string>
+    <string name="checkThisOut">Check This Out!</string>
+    <string name="clickHere">Click Here!</string>
+    <string name="lookAtMyGUI">Look At My GUI!</string>
+    <string name="toast_message">Here is More Information</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="switchOnOff">Switch On/Off</string>
+
+
+    <string name="ButtonText">I\’m a button</string>
+    <string name="emailPrompt">Enter Your Email Address:</string>
+    <string name="pwdPrompt">Type Your Password:</string>
+    <string name="login">LOGIN</string>
+    <string name="preference_file_key">com.example.androidlabs3.SHARED_PREFS_FILE_KEY</string>
+    <string name="saved_email_key">SAVED_EMAIL_KEY</string>
+    <string name="emailHint">Type Email Here</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="your_name">Your Name:</string>
+    <string name="your_email">Your Email:</string>
+    <string name="nameHint">Enter your name</string>
+    <string name="your_picture">Your Picture:</string>
+    <string name="click_button">Click button above to take your picture</string>
+    <string name="goToChat">Go To Chat</string>
+    <string name="chatHint">Type to Chat</string>
+    <string name="send_button">SEND</string>
+    <string name="receive_button">RECEIVE</string>
+    <string name="weatherForecast">Weather Forecast</string>
+    <string name="altTextForWeather">Weather Image</string>
 </resources>
