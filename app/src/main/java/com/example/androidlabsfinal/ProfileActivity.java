@@ -86,11 +86,21 @@ public class ProfileActivity extends AppCompatActivity {
         goToChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent chatPage = new Intent(getApplicationContext(), ChatRoomActivity.class);
+                Intent chatPage = new Intent(ProfileActivity.this, ChatRoomActivity.class);
                 startActivity(chatPage);
             }
         });
 
+
+        //handler for the weather forecast button.
+        Button weatherButton = (Button)findViewById(R.id.goToWeatherButton);
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent weatherPage = new Intent(ProfileActivity.this, WeatherActivity.class);
+                startActivity(weatherPage);
+            }
+        });
 
         mImageButton = (ImageButton)findViewById(R.id.profilePicture);
 

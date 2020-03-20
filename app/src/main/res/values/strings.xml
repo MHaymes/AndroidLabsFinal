@@ -29,4 +29,5 @@
     <string name="receive_button">RECEIVE</string>
     <string name="weatherForecast">Weather Forecast</string>
     <string name="altTextForWeather">Weather Image</string>
+    <string name="goToWeather">Weather Forecast</string>
 </resources>

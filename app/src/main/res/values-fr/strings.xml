@@ -26,5 +26,6 @@
     <string name="chatHint">ecriver ici</string>
     <string name="send_button">envoyer</string>
     <string name="receive_button">recevoir</string>
+    <string name="goToWeather">Meteo</string>
 
 </resources>

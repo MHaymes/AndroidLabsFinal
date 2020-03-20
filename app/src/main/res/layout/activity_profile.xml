@@ -16,6 +16,14 @@
         android:layout_weight="50"
         android:text="@string/goToChat" />
 
+    <Button
+        android:id="@+id/goToWeatherButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:text="@string/goToWeather" />
+
+
     <TextView
         android:id="@+id/yourProfile"
         android:layout_width="match_parent"
