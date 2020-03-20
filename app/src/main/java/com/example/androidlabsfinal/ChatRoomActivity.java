@@ -78,6 +78,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                 Message messageToCommit = new Message(messageText, true);
                 elements.add(messageToCommit);
                 myAdapter.notifyDataSetChanged();
+                messageEditText.setText("");
             }
         });
 
@@ -169,11 +170,10 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             //set the row layout based on the message type.
             if(currentMessage.isSendType()){                    //send type case
-
                 if(newView == null) {
                     newView = inflater.inflate(R.layout.send_row_layout, parent, false);
                 }
-            } else{  //receive type case.
+            }else {  //receive type case.
                 if(newView == null) {
                     newView = inflater.inflate(R.layout.receive_row_layout, parent, false);
                 }

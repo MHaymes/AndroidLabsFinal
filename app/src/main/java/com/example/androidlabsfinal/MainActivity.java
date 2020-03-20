@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent profilePage = new Intent(getApplicationContext(), ProfileActivity.class);
-//                startActivity(profilePage);
+                Intent profilePage = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(profilePage);
             }
         });
 

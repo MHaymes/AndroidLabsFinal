@@ -16,15 +16,15 @@
             android:id="@+id/rowReceiveImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/row_receive"
-            android:layout_weight="2"/>
+            android:layout_weight="2"
+            android:src="@drawable/row_receive" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
             android:id="@+id/chatListViewTextView"
-            android:text="placeholder text"
-            android:layout_weight="8"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="placeholder text" />
 
     </LinearLayout>
 </LinearLayout>

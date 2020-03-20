@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android labarotoire 4</string>
+    <string name="hello_message">Bonjour!</string>
+    <string name="ButtonText">Je suis un bouton</string>
+    <string name="typeHere">Met les mots ici</string>
+    <string name="checkThisOut">Regarde!</string>
+    <string name="clickHere">Poussez ici!</string>
+    <string name="lookAtMyGUI">Regardez mon GUI!</string>
+    <string name="toast_message">Voice mon information</string>
+    <string name="action_settings">Parametre d\'action</string>
+    <string name="switchOnOff">Allumer/éteindre</string>
+    <string name="emailPrompt">Votre email:</string>
+    <string name="pwdPrompt">Ecrivez votre password:</string>
+    <string name="login">Entrez</string>
+    <string name="preference_file_key">com.example.androidlabs3.SHARED_PREFS_FILE_KEY</string>
+    <string name="saved_email_key">SAVED_EMAIL_KEY</string>
+    <string name="emailHint">Votre email</string>
+    <string name="your_profile">Votre information</string>
+    <string name="your_name">Votre nom:</string>
+    <string name="your_email">Votre email:</string>
+    <string name="nameHint">Mettez votre nom</string>
+    <string name="your_picture">Votre photo</string>
+    <string name="click_button">Clickez le bouton devant pour faire votre photo</string>
+    <string name="goToChat">allez au chat</string>
+    <string name="chatHint">ecriver ici</string>
+    <string name="send_button">envoyer</string>
+    <string name="receive_button">recevoir</string>
+
+</resources>
