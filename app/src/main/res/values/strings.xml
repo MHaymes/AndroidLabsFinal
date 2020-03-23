@@ -30,4 +30,8 @@
     <string name="weatherForecast">Weather Forecast</string>
     <string name="altTextForWeather">Weather Image</string>
     <string name="goToWeather">Weather Forecast</string>
+    <string name="currentTemp">Current Temp:</string>
+    <string name="maxTemp">Max Temp: </string>
+    <string name="minTemp">Min Temp: </string>
+    <string name="UV">UV: </string>
 </resources>

@@ -27,5 +27,12 @@
     <string name="send_button">envoyer</string>
     <string name="receive_button">recevoir</string>
     <string name="goToWeather">Meteo</string>
+    <string name="weatherForecast">Meteo</string>
+    <string name="altTextForWeather">Image de meteo</string>
+    <string name="currentTemp">Temperature Actuel:</string>
+    <string name="maxTemp">Température maximale: </string>
+    <string name="minTemp">Température minimale: </string>
+    <string name="UV">Indice UV: </string>
+
 
 </resources>
