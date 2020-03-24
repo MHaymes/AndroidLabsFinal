@@ -7,21 +7,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ProfileActivity"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <Button
         android:id="@+id/goToChatButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="50"
-        android:text="@string/goToChat" />
+        android:text="@string/goToChat"
+        android:nextFocusDown="@id/goToWeatherButton"
+        android:nextFocusUp="@id/clickButton"
+        android:nextFocusRight="@id/goToWeatherButton"
+        android:nextFocusLeft="@id/clickButton"
+    />
+
 
     <Button
         android:id="@+id/goToWeatherButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="50"
-        android:text="@string/goToWeather" />
+        android:text="@string/goToWeather"
+        android:nextFocusDown="@id/yourProfile"
+        android:nextFocusUp="@id/goToChatButton"
+        android:nextFocusRight="@id/yourProfile"
+        android:nextFocusLeft="@id/goToChatButton"
+        />
 
 
     <TextView
@@ -32,19 +47,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/yourName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/your_name" />
+        android:text="@string/your_name"
+        />
 
     <EditText
         android:id="@+id/nameEditBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/nameHint"/>
+        android:hint="@string/nameHint"
+        android:nextFocusDown="@id/emailProfileEditBox"
+        android:nextFocusUp="@id/goToWeatherButton"
+        android:nextFocusRight="@id/emailProfileEditBox"
+        android:nextFocusLeft="@id/goToWeatherButton"
+        />
 
     <TextView
         android:id="@+id/yourEmail"
@@ -57,7 +79,12 @@
         android:id="@+id/emailProfileEditBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/emailHint" />
+        android:hint="@string/emailHint"
+        android:nextFocusDown="@id/profilePicture"
+        android:nextFocusUp="@id/nameEditBox"
+        android:nextFocusRight="@id/profilePicture"
+        android:nextFocusLeft="@id/nameEditBox"
+        />
 
     <TextView
         android:id="@+id/yourPicture"

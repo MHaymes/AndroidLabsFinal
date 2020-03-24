@@ -7,7 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <TextView
         android:id="@+id/emailPrompt"
@@ -24,7 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="@string/emailHint"/>
+        android:hint="@string/emailHint"
+        android:nextFocusDown="@id/pwdEditBox"
+        android:nextFocusUp="@id/loginButton"
+        android:nextFocusRight="@id/pwdEditBox"
+        android:nextFocusLeft="@id/loginButton"
+        />
 
     <TextView
         android:id="@+id/pwdPrompt"
@@ -36,14 +45,23 @@
         android:id="@+id/pwdEditBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:nextFocusDown="@id/loginButton"
+        android:nextFocusUp="@id/nameEditBox"
+        android:nextFocusRight="@id/loginButton"
+        android:nextFocusLeft="@id/nameEditBox"
+        />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="50"
-        android:text="@string/login" />
+        android:text="@string/login"
+        android:nextFocusDown="@id/emailEditBox"
+        android:nextFocusUp="@id/pwdEditBox"
+        android:nextFocusRight="@id/emailEditBox"
+        android:nextFocusLeft="@id/pwdEditBox"/>
 
 
 </LinearLayout>
