@@ -34,4 +34,10 @@
     <string name="maxTemp">Max Temp: </string>
     <string name="minTemp">Min Temp: </string>
     <string name="UV">UV: </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="chatMsgFrag">Message Here</string>
+    <string name="chatIdFrag">"ID: "</string>
+    <string name="IsSendMsg">is a Send Message</string>
+    <string name="hide">Hide</string>
 </resources>

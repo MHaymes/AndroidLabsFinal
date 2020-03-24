@@ -33,6 +33,10 @@
     <string name="maxTemp">Température maximale: </string>
     <string name="minTemp">Température minimale: </string>
     <string name="UV">Indice UV: </string>
+    <string name="chatMsgFrag">Message Here</string>
+    <string name="chatIdFrag">"ID: "</string>
+    <string name="IsSendMsg">is a Send Message</string>
+    <string name="hide">Hide</string>
 
 
 </resources>

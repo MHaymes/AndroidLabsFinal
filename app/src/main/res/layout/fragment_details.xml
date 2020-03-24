@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/fragLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/chatMsgFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chatMsgFrag" />
+
+        <TextView
+            android:id="@+id/chatIdFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chatMsgFrag"
+            android:text="@string/chatIdFrag" />
+
+        <CheckBox
+            android:id="@+id/chatChkFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chatIdFrag"
+            android:text="@string/IsSendMsg" />
+
+        <Button
+            android:id="@+id/chatHideBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hide"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -80,10 +80,14 @@ public class ChatRoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
 
+        //determine if you're on a phone or a tablet.
+        boolean isPhone=false;
+        if ((View)findViewById(R.id.rightChatFrame) == null) {
+            isPhone=true;
+        }
+
         //loads the elements arraylist from the database.
         loadDataFromDatabase();
-
-
 
         //initialize the listview and assign list view adapter
         ListView myList = findViewById(R.id.chatListView);
