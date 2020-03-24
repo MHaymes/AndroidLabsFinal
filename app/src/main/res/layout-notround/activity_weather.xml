@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_weather_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/currentWeatherImg"
+        android:layout_height="200dp"
+        android:layout_width="200dp">
+    </ImageView>
+
+    <ProgressBar
+        android:id="@+id/weatherProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/currentTempTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Temp: "/>
+
+    <TextView
+        android:id="@+id/minTempTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Min Temp: "/>
+
+    <TextView
+        android:id="@+id/maxTempTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Max Temp: "/>
+
+    <TextView
+        android:id="@+id/uvRatingTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UV Rating:"/>
+
+
+</LinearLayout>
+
+
+
