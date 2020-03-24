@@ -158,8 +158,24 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
         });
 
+        //if tablet load the fragment on click listener.
+        if(!isPhone) {
+            myList.setOnItemClickListener((list, item, position, id) -> {
+                //Add fragment loading here from slide 14.
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragFrameLayout, new DetailsFragment())
+                        .commit();
+            });
+        } else //isPhone
+            {
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+//                nextActivity.putExtras(dataToPass); //send data to next activity
+                startActivity(nextActivity); //make the transition
+            }
+
+
         //longClick listener for the listview.
-//        ListView lv = (ListView)findViewById(R.id.chatListView);
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         myList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
