@@ -33,6 +33,11 @@ public class ChatRoomActivity extends AppCompatActivity {
     private MyListAdapter myAdapter;
     SQLiteDatabase db;
 
+    //bundle key class variables.
+    public static final String MESSAGE_KEY = "MESSAGE";
+    public static final String ID_KEY = "ID";
+    public static final String IS_SEND_KEY = "SENDTYPE";
+    public static final String IS_PHONE_KEY = "IS_PHONE";
 
 
 
@@ -81,12 +86,14 @@ public class ChatRoomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat_room);
 
         //determine if you're on a phone or a tablet.
-        boolean isPhone=false;
+        boolean isPhoneTemp=false;
         View testView = (View)findViewById(R.id.fragFrameLayout);
         if (testView == null) {
-            isPhone=true;
+            isPhoneTemp=true;
         }
-        //isPhone=false;
+
+        final boolean isPhone = isPhoneTemp;
+
 
         //loads the elements arraylist from the database.
         loadDataFromDatabase();
@@ -160,28 +167,48 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
         });
 
-        //if tablet load the fragment on click listener.
-        if(!isPhone) {
-            myList.setOnItemClickListener((list, item, position, id) -> {
+
+
+        myList.setOnItemClickListener((list, item, position, id) -> {
+
+            // get the current message.
+            Message currentMsgObj = elements.get(position);
+            String currentMsg = currentMsgObj.getMessage();
+            long itemID = currentMsgObj.getId();
+            boolean sendType = currentMsgObj.getSendType().equals("SEND");
+
+
+            //Create a bundle to pass data to the new fragment
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString(MESSAGE_KEY, currentMsg);
+            dataToPass.putLong(ID_KEY, itemID);
+            dataToPass.putBoolean(IS_SEND_KEY, sendType);
+            dataToPass.putBoolean(IS_PHONE_KEY, isPhone);
+
+            //tablet case
+            if(!isPhone) {
+
+                DetailsFragment dFragment = new DetailsFragment(); //add a DetailsFragment
+                dFragment.setArguments( dataToPass ); //pass it the bundle
+
                 //Add fragment loading here from slide 14.
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragFrameLayout, new DetailsFragment())
+                        .replace(R.id.fragFrameLayout, dFragment)
                         .commit();
-            });
-        } else //isPhone
+            } else //phone Case
             {
-                myList.setOnItemClickListener((list, item, position, id) -> {
-
-                            Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
-            //              nextActivity.putExtras(dataToPass); //send data to next activity
-                            startActivity(nextActivity); //make the transition
-                });
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass); //send data to next activity
+                startActivity(nextActivity); //make the transition
             }
+        });
+
 
 
         //longClick listener for the listview.
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
         myList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView <?> parent, View view, int position, long idMain) {
@@ -201,6 +228,14 @@ public class ChatRoomActivity extends AppCompatActivity {
                                 new String[]{Long.toString(idMainFinal)});
                         elements.remove(pos);
                         myAdapter.notifyDataSetChanged();
+
+                        //if on a tablet, also remove the fragment from the activity.
+                        if(!isPhone){
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .remove(getSupportFragmentManager().findFragmentById(R.id.fragFrameLayout))
+                                    .commit();
+                        }
                     }
                 })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {

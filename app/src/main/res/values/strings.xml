@@ -36,8 +36,8 @@
     <string name="UV">UV: </string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="chatMsgFrag">Message Here</string>
-    <string name="chatIdFrag">"ID: "</string>
-    <string name="IsSendMsg">is a Send Message</string>
+    <string name="chatMsgFrag"></string>
+    <string name="chatIdFrag"></string>
+    <string name="IsSendMsg">Is a send message</string>
     <string name="hide">Hide</string>
 </resources>
