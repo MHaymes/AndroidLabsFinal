@@ -82,9 +82,11 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         //determine if you're on a phone or a tablet.
         boolean isPhone=false;
-        if ((View)findViewById(R.id.rightChatFrame) == null) {
+        View testView = (View)findViewById(R.id.fragFrameLayout);
+        if (testView == null) {
             isPhone=true;
         }
+        //isPhone=false;
 
         //loads the elements arraylist from the database.
         loadDataFromDatabase();
@@ -169,9 +171,12 @@ public class ChatRoomActivity extends AppCompatActivity {
             });
         } else //isPhone
             {
-                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
-//                nextActivity.putExtras(dataToPass); //send data to next activity
-                startActivity(nextActivity); //make the transition
+                myList.setOnItemClickListener((list, item, position, id) -> {
+
+                            Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+            //              nextActivity.putExtras(dataToPass); //send data to next activity
+                            startActivity(nextActivity); //make the transition
+                });
             }
 
 

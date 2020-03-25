@@ -1,51 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
+    android:id="@+id/chatContainer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ChatRoomActivity"
-    android:orientation="vertical" >
+    tools:context=".ChatRoomActivity">
 
     <ListView
         android:id="@+id/chatListView"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/send_button" />
 
-    <!-- figure out how to put this at the bottom of the page...use relative layout here -->
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/chat_ET"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="9">
+        android:layout_toEndOf="@id/sendButton"
+        android:layout_alignParentBottom="true"
+        android:hint="@string/chatHint" />
 
+    <Button
+        android:id="@+id/receiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/receive_button"/>
 
-        <Button
-            android:id="@+id/sendButton"
-            android:layout_weight = "2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/send_button" />
+</RelativeLayout>
 
-        <EditText
-            android:id="@+id/chat_ET"
-            android:layout_weight = "5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:hint="@string/chatHint"/>
-
-        <Button
-            android:id="@+id/receiveButton"
-            android:layout_weight = "2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/receive_button"/>
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
