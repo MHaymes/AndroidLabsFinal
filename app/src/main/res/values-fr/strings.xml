@@ -38,6 +38,11 @@
     <string name="IsSendMsg">"C'est un message d'envoi"</string>
     <string name="hide">Hide</string>
     <string name="goToToolbar">Go To Toolbar Page</string>
+    <string name="Item1">Item 1</string>
+    <string name="Choice1">Choice 1</string>
+    <string name="Choice2">Choice 2</string>
+    <string name="Choice3">Choice 3</string>
+    <string name="choice4">Choice 4</string>
 
 
 </resources>

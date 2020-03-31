@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/choice1"
+        android:title="@string/Choice1"
+        android:icon="@drawable/edit"
+        android:orderInCategory="1"
+        app:showAsAction="always"/>  <!-- This uses showAsAction=always, so look at icon= parameter -->
+
+
+    <item android:id="@+id/choice2"
+        android:title="@string/Choice2"
+        android:icon="@drawable/cloud"
+        android:orderInCategory="2"
+        app:showAsAction="always"/>
+<!--        app:actionViewClass="android.widget.SearchView"/>
+        app:showAsAction="always|collapseActionView"      This uses showAsAction=always, so look at icon= parameter -->
+
+
+    <item android:id="@+id/choice3"
+        android:title="@string/Choice3"
+        android:icon="@drawable/trash"
+        android:orderInCategory="3"
+        app:showAsAction="always" />
+<!--        app:showAsAction="never" />  This uses showAsAction=never, so look at title= parameter -->
+
+    <item android:id="@+id/choice4"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:title="@string/choice4"/>
+
+</menu>
