@@ -37,6 +37,7 @@
     <string name="chatIdFrag"></string>
     <string name="IsSendMsg">"C'est un message d'envoi"</string>
     <string name="hide">Hide</string>
+    <string name="goToToolbar">Go To Toolbar Page</string>
 
 
 </resources>

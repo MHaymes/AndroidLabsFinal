@@ -102,6 +102,18 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+
+
+        //handler for the Toolbar forecast button.
+        Button toolbarButton = (Button)findViewById(R.id.goToToolbarButton);
+        toolbarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toolbarPage = new Intent(ProfileActivity.this, TestToolbar.class);
+                startActivityForResult(toolbarPage, 2);
+            }
+        });
+
         mImageButton = (ImageButton)findViewById(R.id.profilePicture);
 
 
