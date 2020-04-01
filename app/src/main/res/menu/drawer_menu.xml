@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/drawerChatButton"
+        android:title="@string/drawerChat"
+        android:icon="@drawable/edit"
+        android:orderInCategory="1" />  <!-- This uses showAsAction=always, so look at icon= parameter -->
+
+    <item android:id="@+id/drawerWeatherButton"
+        android:title="@string/drawerWeather"
+        android:icon="@drawable/cloud"
+        android:orderInCategory="2"/>
+    <!--        app:actionViewClass="android.widget.SearchView"/>
+            app:showAsAction="always|collapseActionView"      This uses showAsAction=always, so look at icon= parameter -->
+
+
+    <item android:id="@+id/drawerLoginButton"
+        android:title="@string/drawerLogin"
+        android:icon="@drawable/padlock"
+        android:orderInCategory="3"/>
+    <!--        app:showAsAction="never" />  This uses showAsAction=never, so look at title= parameter -->
+
+
+</menu>

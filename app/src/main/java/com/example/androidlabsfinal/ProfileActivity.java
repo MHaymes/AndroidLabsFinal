@@ -17,6 +17,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    static final int REQUEST_RETURN_TO_LOGIN = 2;
+    static final int RESPONSE_RETURN_TO_LOGIN = 500;
     ImageButton mImageButton;
 
     private void dispatchTakePictureIntent() {
@@ -59,7 +61,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.e(ACTIVITY_NAME, "In function: onActivityResult");
@@ -68,6 +69,11 @@ public class ProfileActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
+        }
+        //request code for the
+        if(requestCode == REQUEST_RETURN_TO_LOGIN && resultCode == RESPONSE_RETURN_TO_LOGIN) {
+            Log.e(ACTIVITY_NAME, "login drawer button pressed, returning to login page");
+            finish();  //return to the login page.
         }
     }
 
@@ -78,11 +84,9 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 
-
-
         //click listener for login progresses to profile page
         //handler for the profile image button.
-        Button goToChat = (Button)findViewById(R.id.goToChatButton);
+        Button goToChat = (Button) findViewById(R.id.goToChatButton);
         goToChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +97,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         //handler for the weather forecast button.
-        Button weatherButton = (Button)findViewById(R.id.goToWeatherButton);
+        Button weatherButton = (Button) findViewById(R.id.goToWeatherButton);
         weatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,22 +107,20 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
-
         //handler for the Toolbar forecast button.
-        Button toolbarButton = (Button)findViewById(R.id.goToToolbarButton);
+        Button toolbarButton = (Button) findViewById(R.id.goToToolbarButton);
         toolbarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent toolbarPage = new Intent(ProfileActivity.this, TestToolbar.class);
-                startActivityForResult(toolbarPage, 2);
+                startActivityForResult(toolbarPage, REQUEST_RETURN_TO_LOGIN);
             }
         });
 
-        mImageButton = (ImageButton)findViewById(R.id.profilePicture);
 
-
+        mImageButton = (ImageButton) findViewById(R.id.profilePicture);
         //handler for the profile image button.
-        ImageButton imgButton = (ImageButton)findViewById(R.id.profilePicture);
+        ImageButton imgButton = (ImageButton) findViewById(R.id.profilePicture);
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
